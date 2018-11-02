@@ -4,7 +4,40 @@
     ViewData["Title"] = "Random Question";
 }
 
+<head>
+    <script type="text/javascript">
+
+        function toggle(id) {
+            var e = document.getElementById(id);
+            if (e.style.display == 'none')
+                e.style.display = 'block';
+            else
+                e.style.display = 'none';
+        }
+
+    </script>
+</head>
+
 <h2>Random Question</h2>
+
+<p>
+    <a asp-action="Random">See another random question</a>
+</p>
+<p>
+    <a asp-action="Index">Question Bank</a>
+</p>
 
 
 <p>@Html.ValueForModel(Model.Description)</p>
+
+<p>
+    <a href="#" onclick="toggle('answer');">Reveal answer</a>
+</p>
+<div style="display:none" id="answer">
+    @Html.ValueForModel(Model.Answer)
+</div>
+
+
+
+
+
