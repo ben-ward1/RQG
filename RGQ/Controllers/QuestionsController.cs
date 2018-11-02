@@ -39,9 +39,15 @@ namespace RGQ.Controllers
         public ViewResult Random(int? id)
         {
             Random rnd = new Random();
+
+            // Random id number selected from DbContext.
             int _id = rnd.Next(_context.Question.First().ID, _context.Question.Last().ID + 1);
+
             Question model = new Question();
+
+            // Random selection if id is not passed as URL. Selects a specific question if designated in URL.
             model = _context.Question.SingleOrDefault(x => id == null ? x.ID == _id : x.ID == id);
+
             return View(model);
         }
 
