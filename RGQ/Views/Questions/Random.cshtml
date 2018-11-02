@@ -27,12 +27,11 @@
     <a asp-action="Index">Question Bank</a>
 </p>
 
+<br />
 
-<p>@Html.ValueForModel(Model.Description)</p>
+<p>@Html.ValueForModel(Model.Description) <a href="#" onclick="toggle('answer');">Reveal answer</a></p>
 
-<p>
-    <a href="#" onclick="toggle('answer');">Reveal answer</a>
-</p>
+
 <div style="display:none" id="answer">
     @Html.ValueForModel(Model.Answer)
 </div>
