@@ -24,12 +24,12 @@ namespace RGQ.Controllers
             return View(await _context.Question.ToListAsync());
         }
 
-        public ViewResult Random(int id)
+        public ViewResult Random(int? id)
         {
             Random rnd = new Random();
-            id = rnd.Next(1, _context.Question.Last().ID + 1);
+            int _id = rnd.Next(1, _context.Question.Last().ID + 1);
             Question model = new Question();
-            model = _context.Question.SingleOrDefault(x => x.ID == id);
+            model = _context.Question.SingleOrDefault(x => id == null ? x.ID == _id : x.ID == id);
             return View(model);
         }
 
