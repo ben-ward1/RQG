@@ -16,18 +16,30 @@ namespace RGQ.Controllers
         public QuestionsController(RGQContext context)
         {
             _context = context;
+            
+            
         }
 
         // GET: Questions
         public async Task<IActionResult> Index()
         {
+            SampleQuestions sq = new SampleQuestions();
+
+            if (_context.Question.FirstOrDefault() == null)
+            {
+                foreach (Question q in sq.Samples)
+                {
+                    _context.Add(q);
+                    await _context.SaveChangesAsync();
+                }
+            }
             return View(await _context.Question.ToListAsync());
         }
 
         public ViewResult Random(int? id)
         {
             Random rnd = new Random();
-            int _id = rnd.Next(1, _context.Question.Last().ID + 1);
+            int _id = rnd.Next(_context.Question.First().ID, _context.Question.Last().ID + 1);
             Question model = new Question();
             model = _context.Question.SingleOrDefault(x => id == null ? x.ID == _id : x.ID == id);
             return View(model);

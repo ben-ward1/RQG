@@ -34,7 +34,7 @@ namespace RGQ.Models
                     Description = "Tables where the non-key attributes depend on the entire composite key are" +
                     "said to be in this form.",
                     Answer = "Second normal form (IF table also meets 1NF)   (Note: Tables that meet 1NF whose" +
-                    "key is composed of a single attribute are automatically meet 2NF"
+                    "key is composed of a single attribute are automatically meet 2NF)"
                 },
                 new Question
                 {
@@ -44,5 +44,6 @@ namespace RGQ.Models
                 }
             };
         }
+
     }
 }
