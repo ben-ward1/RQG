@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RQG", "RQG\RQG.csproj", "{387B1FA9-C627-4C3D-B880-2DBBCDDC8A20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RQG.Tests", "RQG.Tests\RQG.Tests.csproj", "{387B1FA9-C627-4C3D-B880-2DBBCDDC8A20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
