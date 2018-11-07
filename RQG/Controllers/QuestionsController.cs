@@ -5,19 +5,17 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using RGQ.Models;
+using RQG.Models;
 
-namespace RGQ.Controllers
+namespace RQG.Controllers
 {
     public class QuestionsController : Controller
     {
-        private readonly RGQContext _context;
+        private readonly RQGContext _context;
 
-        public QuestionsController(RGQContext context)
+        public QuestionsController(RQGContext context)
         {
             _context = context;
-            
-            
         }
 
         // GET: Questions
@@ -76,7 +74,7 @@ namespace RGQ.Controllers
         }
 
         // POST: Questions/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -108,7 +106,7 @@ namespace RGQ.Controllers
         }
 
         // POST: Questions/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]

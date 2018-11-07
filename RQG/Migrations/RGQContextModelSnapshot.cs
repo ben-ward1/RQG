@@ -3,12 +3,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RGQ.Models;
+using RQG.Models;
 
-namespace RGQ.Migrations
+namespace RQG.Migrations
 {
-    [DbContext(typeof(RGQContext))]
-    partial class RGQContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(RQGContext))]
+    partial class RQGContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -18,7 +18,7 @@ namespace RGQ.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("RGQ.Models.Question", b =>
+            modelBuilder.Entity("RQG.Models.Question", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
