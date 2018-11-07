@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace RGQ.Migrations
+namespace RQG.Migrations
 {
     public partial class Initial : Migration
     {

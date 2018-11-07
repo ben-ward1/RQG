@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using RGQ.Models;
+using RQG.Models;
 
-namespace RGQ.Controllers
+namespace RQG.Controllers
 {
     public class HomeController : Controller
     {

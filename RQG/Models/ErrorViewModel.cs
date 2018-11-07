@@ -1,6 +1,6 @@
 using System;
 
-namespace RGQ.Models
+namespace RQG.Models
 {
     public class ErrorViewModel
     {

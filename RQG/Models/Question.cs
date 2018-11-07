@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace RGQ.Models
+namespace RQG.Models
 {
     public class Question
     {

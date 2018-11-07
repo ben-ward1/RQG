@@ -4,15 +4,15 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 
-namespace RGQ.Models
+namespace RQG.Models
 {
-    public class RGQContext : DbContext
+    public class RQGContext : DbContext
     {
-        public RGQContext (DbContextOptions<RGQContext> options)
+        public RQGContext (DbContextOptions<RQGContext> options)
             : base(options)
         {
         }
 
-        public DbSet<RGQ.Models.Question> Question { get; set; }
+        public DbSet<RQG.Models.Question> Question { get; set; }
     }
 }

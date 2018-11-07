@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using RGQ.Models;
+using RQG.Models;
 
-namespace RGQ.Migrations
+namespace RQG.Migrations
 {
-    [DbContext(typeof(RGQContext))]
+    [DbContext(typeof(RQGContext))]
     [Migration("20181102132212_Initial")]
     partial class Initial
     {
@@ -20,7 +20,7 @@ namespace RGQ.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("RGQ.Models.Question", b =>
+            modelBuilder.Entity("RQG.Models.Question", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
