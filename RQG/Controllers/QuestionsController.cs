@@ -38,13 +38,17 @@ namespace RQG.Controllers
         {
             Random rnd = new Random();
 
+            var ids = _context.Question
+                        .Select(question => question.ID)
+                        .ToArray();
+
             // Random id number selected from DbContext.
-            int _id = rnd.Next(_context.Question.First().ID, _context.Question.Last().ID + 1);
+            int randomId = ids[rnd.Next(0, ids.Length)];
 
             Question model = new Question();
 
             // Random selection if id is not passed as URL. Selects a specific question if designated in URL.
-            model = _context.Question.SingleOrDefault(x => id == null ? x.ID == _id : x.ID == id);
+            model = _context.Question.SingleOrDefault(x => id == null ? x.ID == randomId : x.ID == id);
 
             return View(model);
         }
