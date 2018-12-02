@@ -10,5 +10,6 @@ namespace RQG.Models
         public int ID { get; set; }
         public string Description { get; set; }
         public string Answer { get; set; }
+        public string Category { get; set; }
     }
 }

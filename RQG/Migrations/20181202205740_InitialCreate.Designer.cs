@@ -9,14 +9,14 @@ using RQG.Models;
 namespace RQG.Migrations
 {
     [DbContext(typeof(RQGContext))]
-    [Migration("20181102132212_Initial")]
-    partial class Initial
+    [Migration("20181202205740_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.2-rtm-30932")
+                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -27,6 +27,8 @@ namespace RQG.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Answer");
+
+                    b.Property<string>("Category");
 
                     b.Property<string>("Description");
 

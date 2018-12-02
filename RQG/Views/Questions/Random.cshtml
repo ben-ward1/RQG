@@ -6,7 +6,6 @@
 
 <head>
     <script type="text/javascript">
-
         function toggle(id) {
             var answer = document.getElementById(id);
 
@@ -31,7 +30,12 @@
 
 <br />
 
-<p>@Html.ValueForModel(Model.Description) <a href="#" onclick="toggle('answer');">Reveal answer</a></p>
+<p>
+    <b>Question: </b>@Html.ValueForModel(Model.Description) <a href="#" onclick="toggle('answer');">Reveal answer</a>
+</p>
+<p>
+    <b>Category: </b>@Html.ValueForModel(Model.Category)
+</p>
 
 
 <div style="visibility:hidden" id="answer">
